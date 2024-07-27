@@ -1,0 +1,107 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0;
+  min-height: 100vh ;
+}
+/* navigation bar */
+nav {
+  padding-top: 1rem;
+
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0.3rem;
+}
+
+
+  section {
+    width: 100vw;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+   .edit {
+    display: flex;
+    gap: 30px;
+    padding-top: 9px;
+    justify-content: center;
+  }
+  .centerDone {
+    display: flex;
+    justify-content: center;
+  }
+  /* .done {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #174ea6;
+  } */
+  .card {
+    /* border: 1.5px solid #1677ff; */
+    width: 100%;
+    margin-top: 0.3rem;
+    background-color: #f5d4fa;
+  }
+  
+  .container {
+    margin-top: 0.25em;
+    margin-bottom: 0.375em;
+    margin-left: 0.775em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+  }
+  
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    color: #470b45;
+  }
+  
+  .time {
+    font-size: 0.875em;
+    color: #6d226a;
+    
+  }
+
+  .button-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  .secondary-cta {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .primary-cta {
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: 600;
+    color: #1677ff;
+    border: none;
+    border-radius: 1.5em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
