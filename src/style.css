@@ -1,10 +1,10 @@
-*{
+* {
   box-sizing: border-box;
 }
 body {
   margin: 0px;
   padding: 0;
-  min-height: 100vh ;
+  min-height: 100vh;
   background-color: #effefb;
 }
 
@@ -16,75 +16,73 @@ nav {
   align-items: center;
 }
 
-  section {
-    /* width: 100vw; */
-    padding: 8px 6px;
-    display: flex;
-    flex-wrap: wrap;
-  }
- 
-  .card {
-    width: 100%;
-    margin-top: 0.3rem;
-    padding: 0 1rem;
-    background-color:#8fffe8;
-   border-radius: 6px  ;
-  }
-  
-  .container {
-    width: 80%;
-    margin-top: 0.25em;
-    margin-bottom: 0.375em;
-    margin-left: 0.775em;
-    margin-right: 2em;
-    display: flex;
-    flex-direction: row;
-    gap: 0.75em;
-  }
-  .text-wrap input{
-    background-color: inherit;
-    border: 0;
-  }
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25em;
-    color:#26262b;
-  }
-  
-  
-  .button-wrap {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .time {
-    margin: 0;
-    font-size: 0.875em;
-    color:#393a41;
-    
-  }
+section {
+  /* width: 100vw; */
+  padding: 8px 6px;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  .secondary-cta {
-    background-color: transparent;
-    border: none;
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  
-  .primary-cta {
-    font-size: 15px;
-    background-color: transparent;
-    font-weight: 600;
-    color: #1677ff;
-    border: none;
-    border-radius: 1.5em;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    text-decoration: underline;
-  }
+.card {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0 1rem;
+  background-color: #8fffe8;
+  border-radius: 6px;
+}
+
+.container {
+  width: 80%;
+  margin-top: 0.25em;
+  margin-bottom: 0.375em;
+  margin-left: 0.775em;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 0.75em;
+}
+.text-wrap input {
+  background-color: inherit;
+  border: 0;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  color: #26262b;
+}
+
+.button-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time {
+  margin: 0;
+  font-size: 0.875em;
+  color: #393a41;
+}
+
+.secondary-cta {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.primary-cta {
+  font-size: 15px;
+  background-color: transparent;
+  font-weight: 600;
+  color: #1677ff;
+  border: none;
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  text-decoration: underline;
+}

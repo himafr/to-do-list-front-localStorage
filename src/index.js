@@ -1,14 +1,12 @@
-let list = [
-    { name: "hema", date: "10/20/2024" },
-    ];
-  let myArray = JSON.parse(localStorage.getItem("tasks"));
-  list = myArray ?? [];
-  function getThem() {
-    document.getElementById("section").innerHTML = "";
+let list = [{ name: "hema", date: "10/20/2024" }];
+let myArray = JSON.parse(localStorage.getItem("tasks"));
+list = myArray ?? [];
+function getThem() {
+  document.getElementById("section").innerHTML = "";
 
-    let index = 0;
-    for (var element of list) {
-      var zz = `
+  let index = 0;
+  for (var element of list) {
+    var zz = `
       <div class="card" >
       <div class="container">
         <div class="right">
@@ -26,49 +24,47 @@ let list = [
             </div>
     </div>
   `;
-      index++;
-      document.getElementById("section").innerHTML += zz;
-    }
+    index++;
+    document.getElementById("section").innerHTML += zz;
   }
-  getThem();
+}
+getThem();
 
-  document.getElementById("add").addEventListener("click", () => {
-    let name = document.getElementById("name").value;
-    let dt = new Date();
-    let date =
-      dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
-    list.push({
-      name: name,
-      date: date,
-    });
+document.getElementById("add").addEventListener("click", () => {
+  let name = document.getElementById("name").value;
+  let dt = new Date();
+  let date = dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
+  list.push({
+    name: name,
+    date: date,
+  });
+  setTask();
+  getThem();
+});
+
+function done(index) {
+  let button = document.getElementById("card" + index);
+
+  console.log(button.style.color);
+  console.log(button.style.color === "rgb(102, 102, 102)");
+  if (button.style.color == "rgb(102, 102, 102)") {
+    button.style.color = "green";
+    button.innerHTML = "Mark as undone";
+  } else {
+    button.style.color = "#666";
+    button.innerHTML = "Mark as done";
+  }
+}
+function dele(index) {
+  let as = confirm("are you sure you wanna delete :");
+  if (as) {
+    list.splice(index, 1);
     setTask();
     getThem();
-  });
+  }
+}
 
-  function done(index){
-    let button= document.getElementById("card"+index)
-
-    console.log(button.style.color)
-    console.log(button.style.color==="rgb(102, 102, 102)")
-   if(button.style.color=="rgb(102, 102, 102)"){
-     button.style.color="green"
-     button.innerHTML="Mark as undone"
-   }else{
-     button.style.color="#666"
-     button.innerHTML="Mark as done"
- 
-   }
-  }
-  function dele(index) {
-    let as = confirm("are you sure you wanna delete :");
-    if (as) {
-      list.splice(index,1);
-      setTask()  
-      getThem();
-    }
-  }
-  
-  function setTask() {
-    let str = JSON.stringify(list);
-    localStorage.setItem("tasks", str);
-  }
+function setTask() {
+  let str = JSON.stringify(list);
+  localStorage.setItem("tasks", str);
+}
