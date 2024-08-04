@@ -31,13 +31,14 @@ function getThem() {
 getThem();
 
 document.getElementById("add").addEventListener("click", () => {
-  let name = document.getElementById("name").value;
+  let name = document.getElementById("name");
   let dt = new Date();
   let date = dt.getFullYear() + "/" + (dt.getMonth() + 1) + "/" + dt.getDate();
   list.push({
-    name: name,
+    name: name.value,
     date: date,
   });
+  name.value="";
   setTask();
   getThem();
 });
@@ -56,8 +57,8 @@ function done(index) {
   }
 }
 function dele(index) {
-  let as = confirm("are you sure you wanna delete :");
-  if (as) {
+  let conf = confirm("are you sure you wanna delete :");
+  if (conf) {
     list.splice(index, 1);
     setTask();
     getThem();
